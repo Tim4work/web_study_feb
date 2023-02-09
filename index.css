@@ -1,3 +1,7 @@
+body {
+    background: rgb(194, 194, 194);
+}
+
 ul,li{
     margin: 0;
     padding: 0;
@@ -5,21 +9,29 @@ ul,li{
 }
 
 a{
+    font-size: 1em;
     text-decoration: none;
     color: inherit;
     display: inline-block;
 }
 
+li a:hover {
+    background-color: aqua;
+}
+
 div{
     border: 1px solid red;
-    width: 300px;
+    width: 90%;
+    margin: auto;
+    padding-top: 0em;
 }
 
 ul{
     display:flex;
     flex-flow: row nowrap;
-    padding: 10px;
-    background-color: yellow;
+    justify-content: flex-start;
+    padding: 0.2em;
+    /* background-color: yellow; */
 }
 
 div>ul>li::after{
@@ -34,5 +46,47 @@ div>ul>li:last-child::after{
 
 div>ul>li>a{
     padding: 0 10px;
-    border: 1px solid blue;
+}
+
+
+p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #000000;
+    text-align: justify;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.container {
+    width: 70em;
+    display: flex;
+    flex-wrap: nowrap;
+	/* display: inline-flex; */
+}
+
+.item-center {
+    display: flex;
+    width: 60%;
+    justify-content: auto;
+    align-items: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    padding-left: 0em;
+}
+
+.item-right {
+    width: 30%;
+    height: 500%;
+    /* display: flex;
+    justify-content: auto;
+    align-self: stretch; */
+    padding-left: 15em;
+}
+
+.wrap {
+    background: url(./background_image.jfif) no-repeat center fixed;
+    background-size: cover;
+    height: 100vh;
 }
